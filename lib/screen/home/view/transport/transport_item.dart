@@ -1,0 +1,84 @@
+import 'package:demi_app/screen/home/data/model/all_bills_model.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class TransportItem extends StatelessWidget {
+  final Transport transport;
+  const TransportItem({
+    super.key,
+    required this.transport,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(
+          10,
+        ),
+      ),
+      elevation: 0.5,
+      child: InkWell(
+        onTap: () async {
+          // await Navigator.pushNamed(context, AdvertDetailScreen.routeName,
+          //     // arguments: advertModel.id,
+          //     arguments: {
+          //       'productId': advertModel.id,
+          //       'id': advertModel.id,
+          //       'title': advertModel.title,
+          //       'farm': advertModel.farm,
+          //       'price': advertModel.price,
+          //       'negotiable': advertModel.negotiable,
+          //       'description': advertModel.description,
+          //       'pictureUrls': advertModel.pictureUrls,
+          //     });
+        },
+        child: GridTile(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              alignment: AlignmentDirectional.topStart,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(
+                      10.r,
+                    ),
+                    topRight: Radius.circular(
+                      10.r,
+                    ),
+                  ),
+                  child: Image.network(
+                    transport.logo,
+                    height: 120.h,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Container(
+                  height: 20.h,
+                  width: 65.w,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(
+                      5,
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      transport.network,
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        )),
+      ),
+    );
+  }
+}
+
+class CustomText {}

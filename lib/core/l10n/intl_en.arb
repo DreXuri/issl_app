@@ -1,0 +1,14 @@
+{
+    "language": "English",
+    "@languge": {
+        "description": "The native language"
+    },
+    "airtime": "Airtime",
+    "@airtime": {
+        "description": "airtime plan"
+    },
+    "companyname": "Company Name",
+    "@companyname": {
+        "description": "Betting comapnies"
+    }
+}
