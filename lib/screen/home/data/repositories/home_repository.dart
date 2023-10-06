@@ -17,7 +17,6 @@ final homeRepositoryProvider =
 
 abstract class HomeRepository {
   Future<Either<Failure, AllBills>> getBills(BillsParams params);
-  // Future<Either<Failure, AdvertSuccessModel>> deleteProduct(String product_id);
 }
 
 class HomeRepositoryImpl implements HomeRepository {

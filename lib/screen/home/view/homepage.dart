@@ -19,7 +19,6 @@ static const route = 'home';
 
 class _HomeState extends ConsumerState<Home>
     with TickerProviderStateMixin {
-  // final TextEditingController _searchController = TextEditingController();
 
   late final TabController _tabController;
 

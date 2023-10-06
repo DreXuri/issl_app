@@ -20,18 +20,7 @@ class TvItem extends StatelessWidget {
       elevation: 0.5,
       child: InkWell(
         onTap: () async {
-          // await Navigator.pushNamed(context, AdvertDetailScreen.routeName,
-          //     // arguments: advertModel.id,
-          //     arguments: {
-          //       'productId': advertModel.id,
-          //       'id': advertModel.id,
-          //       'title': advertModel.title,
-          //       'farm': advertModel.farm,
-          //       'price': advertModel.price,
-          //       'negotiable': advertModel.negotiable,
-          //       'description': advertModel.description,
-          //       'pictureUrls': advertModel.pictureUrls,
-          //     });
+
         },
         child: GridTile(
             child: Column(
